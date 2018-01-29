@@ -9,3 +9,11 @@ describe('Functionality of promise: ', () => {
     expect(exp.promise).rejects.toBe('error');
   });
 });
+
+describe('Functionality of onRejected: ', () => {
+  global.console.log = jest.fn();
+  test('Should be called with \'Hello\': ', () => {
+    exp.onRejected(new Error('Hello'));
+    expect(console.log).toHaveBeenCalledWith('Hello');
+  });
+});
