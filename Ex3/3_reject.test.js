@@ -16,4 +16,9 @@ describe('Functionality of onReject: ', () => {
     exp.onReject('Hello');
     expect(console.log).toHaveBeenCalledTimes(1);
   });
+
+  test('Should be called with \'Hello\': ', () => {
+    exp.onReject(new Error('Hello'));
+    expect(console.log).toHaveBeenCalledWith('Hello');
+  });
 });
