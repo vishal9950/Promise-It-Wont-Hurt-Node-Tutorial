@@ -14,4 +14,7 @@ promise.then((msg) => {
   onReject(err);
 });
 
-module.exports = promise;
+module.exports = {
+  promise,
+  onReject,
+};
