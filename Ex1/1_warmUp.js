@@ -6,12 +6,21 @@ const validateInput = (input) => {
   return true;
 };
 
+const print = (msg) => {
+  console.log(msg);
+};
+
 const asyncLog = (input) => {
   if (!validateInput(input)) {
     return false;
   }
-  setTimeout(console.log(input), 300);
+  setTimeout(print, 300, input);
   return true;
 };
 
-module.exports = asyncLog;
+asyncLog('TIMED OUT!');
+
+module.exports = {
+  asyncLog,
+  print,
+};
