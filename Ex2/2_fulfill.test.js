@@ -6,4 +6,8 @@ describe('Functionality of promise: ', () => {
     // promise.resolve('HELLO');
     expect(promise).resolves.toBe('FULFILLED!');
   });
+
+  test('Should reject with an error: ', () => {
+    expect(promise).rejects.toMatch('error');
+  });
 });
