@@ -10,6 +10,7 @@ const asyncLog = (input) => {
   if (!validateInput(input)) {
     return false;
   }
+  setTimeout(console.log(input), 300);
   return true;
 };
 
