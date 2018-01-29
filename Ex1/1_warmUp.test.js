@@ -11,9 +11,13 @@ describe('Argument Validation: ', () => {
 });
 
 describe('Functionality of setTimeout: ', () => {
+  jest.useFakeTimers();
+  asyncLog('HELLO');
   test('Should be called for 1 time(s): ', () => {
-    jest.useFakeTimers();
-    asyncLog('HELLO');
     expect(setTimeout).toHaveBeenCalledTimes(1);
+  });
+
+  test('Should be called with \'HELLO\': ', () => {
+    expect(setTimeout).toHaveBeenCalledWith(console.log('HELLO'), 300);
   });
 });
