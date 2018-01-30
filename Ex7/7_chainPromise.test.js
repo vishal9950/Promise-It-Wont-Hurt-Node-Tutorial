@@ -10,4 +10,8 @@ describe('Test secondPromise: ', () => {
   test('Should return a promise: ', () => {
     expect(exp.secondPromise).toBeInstanceOf(Promise);
   });
+
+  test('Should resolve with resolve value from 1: ', () => {
+    expect(exp.secondPromise).resolves.toBe('String from 1');
+  });
 });
