@@ -6,8 +6,6 @@ const promise = new Promise((fulfill, reject) => {
   }, 300);
 });
 
-promise.then((msg) => {
-  console.log(msg);
-});
+promise.then(console.log);
 
 module.exports = promise;
