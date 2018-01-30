@@ -4,6 +4,10 @@ const promise = new Promise((resolve, reject) => {
   resolve('MANHATTAN');
 });
 
-promise.then(attachTitle).then(console.log);
+const prom2 = promise.then(attachTitle);
+prom2.then(console.log);
 
-module.exports = promise;
+module.exports = {
+  promise,
+  prom2,
+};
