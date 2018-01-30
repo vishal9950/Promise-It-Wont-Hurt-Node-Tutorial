@@ -1,13 +1,9 @@
 const exp = require('./4_rejectNotReject');
 
 describe('Functionality of promise: ', () => {
-  test('Should resolve the async func: ', () => {
-    expect(exp.promise).resolves.toBe('Hello');
-  });
+  test('Should resolve the async func: ', () => expect(exp.promise).resolves.toBe('I FIRED'));
 
-  test('Should reject the async func with error: ', () => {
-    expect(exp.promise).rejects.toBe('error');
-  });
+  test('Should not work for reject the async func with error: ', () => expect(exp.promise).rejects.toBe(new Error('I DID NOT FIRE')));
 });
 
 describe('Functionality of onRejected: ', () => {
