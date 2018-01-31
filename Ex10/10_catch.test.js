@@ -13,5 +13,5 @@ describe('Test iterate: ', () => {
 });
 
 describe('Test promise: ', () => {
-  test('');
+  test('Should resolve to the error message \'OH NOES\': ', () => expect(exp.promise).resolves.toBe('OH NOES'));
 });

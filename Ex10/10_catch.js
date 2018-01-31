@@ -7,10 +7,9 @@ const iterate = (input) => {
   return input + 1;
 };
 
-const catchMe = (err) => {
-  console.log(err.message);
-};
-
+const catchMe = err =>
+  // console.log(err.message);
+  err.message;
 const promise = Promise.resolve(iterate(1))
   .then(iterate)
   .then(iterate)
