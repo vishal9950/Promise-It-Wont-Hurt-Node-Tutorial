@@ -3,4 +3,9 @@ const alwaysThrows = () => {
   return errorMsg;
 };
 
-module.exports = alwaysThrows;
+const iterate = input => input + 1;
+
+module.exports = {
+  alwaysThrows,
+  iterate,
+};
