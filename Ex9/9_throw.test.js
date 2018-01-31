@@ -5,4 +5,6 @@ describe('Test parsePromised: ', () => {
     const testPromise = parsePromised();
     expect(testPromise).toBeInstanceOf(Promise);
   });
+
+  test('Takes JSON object as argument, pass array: ', () => expect(parsePromised([])).rejects.toBe('Unexpected end of JSON input'));
 });
