@@ -2,9 +2,7 @@ const exp = require('./10_catch');
 
 describe('Test alwaysThrows: ', () => {
   test('Should throw an error message: ', () => {
-    const err = new Error('OH NOES');
-    const testReturn = exp.alwaysThrows();
-    expect(testReturn).toEqual(err);
+    expect(exp.alwaysThrows).toThrow('OH NOES');
   });
 });
 

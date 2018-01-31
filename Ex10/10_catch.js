@@ -1,6 +1,5 @@
 const alwaysThrows = () => {
-  const errorMsg = new Error('OH NOES');
-  return errorMsg;
+  throw new Error('OH NOES');
 };
 
 const iterate = input => input + 1;
