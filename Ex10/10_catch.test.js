@@ -7,7 +7,11 @@ describe('Test alwaysThrows: ', () => {
 });
 
 describe('Test iterate: ', () => {
-  test('Should return an number incremented by 1: ', () => {
+  test('Should return a number incremented by 1: ', () => {
     expect(exp.iterate(2)).toBe(3);
   });
+});
+
+describe('Test promise: ', () => {
+  test('');
 });
